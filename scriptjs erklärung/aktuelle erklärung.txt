@@ -1,0 +1,29 @@
+myDishes: Eine Liste der verfügbaren Gerichte.
+prices: Eine Liste der Preise, die den Gerichten in myDishes entsprechen.
+images: Eine Liste der Bildpfade, die den Gerichten in myDishes entsprechen.
+basketDishes: Eine Liste der Gerichte im Warenkorb.
+basketPrices: Eine Liste der Preise der Gerichte im Warenkorb.
+amounts: Eine Liste der Mengen der Gerichte im Warenkorb.
+Funktionen
+init()
+Diese Funktion initialisiert die Webseite, indem sie das Haupt-HTML lädt und die Funktionen render() und renderBasket() aufruft, um die Gerichte und den Warenkorb darzustellen.
+render()
+Diese Funktion rendert die Liste der verfügbaren Gerichte auf der Webseite. Sie geht durch die myDishes-Liste und fügt jedes Gericht zusammen mit seinem Bild und Preis der Seite hinzu.
+renderBasket()
+Diese Funktion rendert den Warenkorb auf der Webseite. Sie geht durch die basketDishes-Liste und fügt jedes Gericht zusammen mit seinem Preis und seiner Menge dem Warenkorb hinzu. Außerdem ruft sie die calcSum()-Funktion auf, um die Gesamtsumme zu berechnen.
+addToBasket(dish)
+Diese Funktion fügt ein Gericht zum Warenkorb hinzu. Wenn das Gericht bereits im Warenkorb ist, wird die Menge erhöht, andernfalls wird das Gericht neu hinzugefügt.
+deleteFromBasket(dish)
+Diese Funktion entfernt ein Gericht aus dem Warenkorb oder verringert die Menge. Wenn die Menge 0 erreicht, wird das Gericht vollständig entfernt.
+calcSum()
+Diese Funktion berechnet die Gesamtsumme der Gerichte im Warenkorb und zeigt sie an.
+showResponsiveBasket()
+Diese Funktion blendet die linke Hauptansicht aus und zeigt den Warenkorb in einer responsiven Ansicht an. Sie wird aufgerufen, wenn der Benutzer den Warenkorb in der mobilen Ansicht anzeigen möchte.
+returnButton()
+Diese Funktion blendet die linke Hauptansicht ein und die rechte Hauptansicht (Warenkorb) aus, jedoch nur, wenn die Bildschirmbreite kleiner oder gleich 768px ist.
+window.addEventListener("resize", function() { ... })
+Diese Funktion passt die Anzeige des Warenkorbs basierend auf der Fenstergröße an. Wenn die Breite des Fensters über 1100px liegt, wird der Warenkorb immer angezeigt. Andernfalls wird das Display-Attribut zurückgesetzt.
+order()
+Diese Funktion zeigt eine Nachricht an, dass die Bestellung unterwegs ist. Wenn die Bildschirmbreite kleiner oder gleich 768px ist, wird nach einer Verzögerung von 2 Sekunden returnButton() aufgerufen, um den Warenkorb auszublenden.
+Zusammenfassung
+Der Code implementiert die Grundfunktionalität eines Online-Warenkorbs, bei dem der Benutzer Gerichte zur Bestellung hinzufügen oder entfernen kann. Zusätzlich gibt es Funktionen zur Anpassung der Anzeige basierend auf der Bildschirmgröße, um eine responsive Benutzererfahrung zu gewährleisten. Die Warenkorbanzeige wird in der mobilen Ansicht nach der Bestellung ausgeblendet.

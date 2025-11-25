@@ -1,0 +1,41 @@
+könntest du mir bitte im detail die funktionen: returnButton, window.addEventListener, order erklären ?
+
+1. returnButton()
+Zweck:
+Die returnButton-Funktion soll die Ansicht zurücksetzen, wenn der Benutzer zur Hauptansicht zurückkehren möchte, nachdem er sich den Warenkorb angesehen hat.
+
+let mainLeft = document.getElementById('mainLeft');: Holt das Element mit der ID mainLeft, das die linke Hauptansicht darstellt.
+mainLeft.classList.remove('d-none');: Entfernt die CSS-Klasse d-none vom mainLeft-Element, um es sichtbar zu machen.
+let mainRight = document.getElementById('mainRight');: Holt das Element mit der ID mainRight, das den Warenkorb darstellt.
+mainRight.classList.remove('showResponsiveBasket');: Entfernt die CSS-Klasse showResponsiveBasket vom mainRight-Element, falls diese gesetzt ist.
+mainRight.classList.remove('d-none');: Entfernt die CSS-Klasse d-none vom mainRight-Element, um sicherzustellen, dass es sichtbar ist.
+if (window.innerWidth <= 768) { mainRight.style.display = "none"; }: Wenn die Fensterbreite kleiner oder gleich 768px ist, wird das mainRight-Element ausgeblendet, indem das display-Attribut auf none gesetzt wird.
+
+
+2. window.addEventListener("resize", function() { ... })
+
+Diese Funktion passt die Anzeige des mainRight-Elements (Warenkorb) an, wenn die Größe des Browserfensters geändert wird.
+
+window.addEventListener("resize", function() { ... });: Fügt einen Event-Listener hinzu, der jedes Mal ausgeführt wird, wenn die Größe des Browserfensters geändert wird.
+const mainRight = document.getElementById('mainRight');: Holt das mainRight-Element (Warenkorb).
+if (window.innerWidth > 1100) { mainRight.style.display = "flex"; }: Wenn die Fensterbreite größer als 1100px ist, wird das display-Attribut des mainRight-Elements auf flex gesetzt, um es sichtbar zu machen.
+else { mainRight.style.display = ""; }: Andernfalls wird das display-Attribut auf seinen Standardwert zurückgesetzt, um die standardmäßige CSS-Logik zu verwenden.
+
+
+3. order()
+
+Diese Funktion zeigt eine Nachricht an, dass die Bestellung unterwegs ist, und setzt die Ansicht nach 2 Sekunden zurück, wenn die Fensterbreite kleiner oder gleich 768px ist.
+
+let order = document.getElementById('order');: Holt das order-Element, das die Nachricht zur Bestellung anzeigt.
+order.innerHTML = ``;: Setzt den Inhalt des order-Elements zurück.
+order.innerHTML = bestellung ist unterwegs;: Setzt den Inhalt des order-Elements auf "bestellung ist unterwegs".
+if (window.innerWidth <= 768) {: Wenn die Fensterbreite kleiner oder gleich 768px ist:
+setTimeout(() => { returnButton(); }, 2000);: Wartet 2 Sekunden (2000 Millisekunden) und ruft dann die returnButton()-Funktion auf, um die Ansicht zurückzusetzen.
+
+
+Zusammenfassung:
+returnButton() stellt die Hauptansicht wieder her, indem es die d-none-Klasse vom mainLeft-Element entfernt und das mainRight-Element ausblendet, falls die Fensterbreite kleiner oder gleich 768px ist.
+window.addEventListener("resize", ...) passt die Anzeige des mainRight-Elements dynamisch an die Fenstergröße an, indem es das display-Attribut entsprechend setzt.
+order() zeigt eine Nachricht an, dass die Bestellung unterwegs ist, und ruft die returnButton()-Funktion nach 2 Sekunden auf, wenn die Fensterbreite kleiner oder gleich 768px ist, um die Ansicht zurückzusetzen.
+
+

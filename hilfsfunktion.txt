@@ -1,0 +1,11 @@
+http://david-pyritz.developerakademie.net/modul-7/BestellApp/index.html
+
+Den localstorage brauchst du nur wenn du möchtest das deine gerichte nach dem neuladen der seite die gerichte die davor ausgewält im warenkorb bleiben, ich weiß leider nicht mehr wie da die anforderung war im zweifel nochmal in die Checkliste schauen.
+Du kannst das ja so ähnlich aufbauen wie beim laden der gerichte bei der load function du steckst die ja alle schon in ein seperates array jetzt muss du nur noch dieses array aus lesen mit einer forschleife und wieder mit html anzeigen lassen da wo du es haben möchtest im prinzp hast du das ja so ähnlich schon für deine gerichte gemacht.
+
+
+du könntest mit der indexOf methode arbeiten und abfragen ob das gericht bereits 
+im warekorb ist wenn ja soll sich nur die menge um 1 erhöhen und der preis drauf addiert werden
+
+
+filter: drop-shadow(1rem 1rem 4px #828080);

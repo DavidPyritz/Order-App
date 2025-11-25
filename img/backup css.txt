@@ -1,0 +1,245 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333636;
+    border: 4px solid #C59048;
+    filter: drop-shadow(1rem 1rem 4px #828080);
+    padding: 0.3rem 2rem 0.3rem 2rem;
+    border-radius: 20px;
+    background-color: #FF7F21;
+    background: rgba(217, 121, 25, 0.5);
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+    border-style: groove;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FF7F21;
+    border-radius: 10px;
+    border: 3px inset #FF7F21;
+}
+
+h1 {
+    display: flex;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+h2 {
+    width: 30px;
+}
+
+.iconName {
+    display: flex;
+    border-style: groove;
+    height: 50px;
+    width: 200px;
+}
+
+.adress {
+    display: flex;
+    border-style: groove;
+    height: 50px;
+    width: 200px;
+}
+
+.language {
+    display: flex;
+    border-style: groove;
+    height: 50px;
+    width: 200px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+
+
+}
+
+.mainLeft {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-style: groove;
+    border-radius: 10px;
+    border: 3px inset #FF7F21;
+    width: 80%;
+
+}
+
+.backgroundPicture {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 150px;
+}
+
+.atf-image {
+    object-fit: cover;
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+}
+
+.backgroundPicture2 {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 150px;
+    width: 600px;
+}
+
+.favoriteDishes {
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 16px;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    background-color: #FF7F21;
+    border-radius: 10px;
+    border: 3px inset #FF7F21;
+    gap: 16px;
+}
+
+@media (max-width: 1160px) {
+    .favoriteDishes {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 16px;
+    }
+}
+
+.dishHeader {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 3px inset #FF7F21;
+    padding: 16px;
+    background-color: #FF7F21;
+    margin: 16px;
+    max-width: 80%;
+}
+
+.dishHeader:hover {
+    background-color: white;
+    border-radius: 10px;
+    border: 3px inset #e9e0e0;
+}
+
+.dishesPrice {
+    display: flex;
+    gap: 16px;
+}
+
+.dishesButton {
+    color: #FF7F21;
+    height: 30px;
+    width: 30px;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BasketButtonMinusPlus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+}
+
+.mainRight {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-style: groove;
+    width: 400px;
+    gap: 16px;
+    border-radius: 10px;
+    border: 3px inset #FF7F21;
+    background-color: #FF7F21;
+    position: sticky;
+    flex-grow: 1;
+}
+
+.basket9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 0px;
+    width: 80%;
+    
+    
+
+}
+
+.basket {
+    border-style: groove;
+    min-height: 100px;
+    width: 90%;
+    gap: 6px;
+    
+}
+
+.singleBasketElement {
+    display: flex;
+    border-style: groove;
+    gap: 16px;
+}
+
+.dishPriceAmount {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.subtotal {
+    border-style: groove;
+    width: 90%;
+}
+
+.order {
+    border-style: groove;
+    width: 90%;
+}
+
+
+
+
+.footer {
+    width: 100%;
+    height: 150px;
+
+    border-radius: 10px;
+    border: 3px inset #FF7F21;
+}
+
+.d-none {
+    display: none;
+}
